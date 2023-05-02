@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_assoc($result);
         if ($row['user_status'] == 0) {
-            $errormsg = "Your account is Inactive";
+            $errormsg = "Incorrect username/password!";
         } elseif (mysqli_num_rows($result)) {
             $val3 = date("Y/m/d");
             date_default_timezone_set("Africa/Nairobi");
